@@ -129,6 +129,7 @@ class ReflectionBuilder
 				
 				annotationDatas.unshift( { annotationName: m.name, annotationKeys: annotationKeys } );
 				f.meta.remove( m );//remove metadata
+				f.meta.push({name: ':Inject', pos: Context.currentPos()});
 			}
 			else if ( displayWarning && m.name.charAt( 0 ) != ":" )
 			{
